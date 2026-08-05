@@ -2,10 +2,12 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
+title: Gyu Seon Kim # the website title (if blank, full name will be used instead)
+first_name: Gyu Seon
 middle_name: R.
-last_name: Name
+last_name: Kim
+url: https://gyuseonkim.github.io
+baseurl:
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
