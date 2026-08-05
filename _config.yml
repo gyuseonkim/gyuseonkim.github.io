@@ -8,6 +8,7 @@ middle_name:
 last_name: Kim
 contact_note: >
   For research inquiries, collaboration opportunities, or professional connections, please feel free to contact me via email or LinkedIn.
+  # For research inquiries and collaboration opportunities, please feel free to reach out.
 description: >
   Personal academic website of Gyu Seon Kim, a research engineer specializing in
   reinforcement learning, quantum machine learning, and autonomous aerospace systems.
