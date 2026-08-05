@@ -361,8 +361,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Gyu Seon]
-  first_name: [Kim]
+  last_name: [Kim]
+  first_name: [Gyu Seon, Gyu-Seon, Gyuseon, G. S.]
 
   style: apa
   locale: en
