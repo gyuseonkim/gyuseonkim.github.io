@@ -8,8 +8,16 @@ nav: false
 
 {% include bib_search.liquid %}
 
+<style>
+  .publications .author > em {
+    font-weight: 700;
+  }
+</style>
+
 <div class="publications">
 
-{% bibliography --query @*[category=domestic_conference] %}
+<h2>Presented and Published</h2>
+
+{% bibliography --query @inproceedings[category=domestic_conference] %}
 
 </div>
