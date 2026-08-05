@@ -8,7 +8,31 @@
   .publications .author > em {
     font-weight: 700;
   }
-</style> <div class="publications"> <h2>Under Review</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">JOK</abbr> </div> <div id="RL_LEO_Control_Communication_KR" class="col-sm-8"> <div class="title">강화학습 기반 지구 저궤도 위성 제어 및 통신</div> <div class="author"> <em>Gyu Seon Kim</em>, Soohyun Park, and Joongheon Kim </div> <div class="periodical"> </div> <div class="periodical"> 한국정보과학회논문지 (Under Revision) </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">RL_LEO_Control_Communication_KR</span><span class="p">,</span>
+
+  .numbered-publications {
+    counter-reset: publication-number 6;
+  }
+
+  .numbered-publications ol.bibliography > li {
+    position: relative;
+    padding-left: 2.75rem;
+    counter-increment: publication-number -1;
+  }
+
+  .numbered-publications ol.bibliography > li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    content: counter(publication-number) ".";
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .numbered-publications ol.bibliography > li[data-publication-number]::before {
+    content: attr(data-publication-number) ".";
+  }
+</style> <div class="publications numbered-publications"> <h2>Under Review</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">JOK</abbr> </div> <div id="RL_LEO_Control_Communication_KR" class="col-sm-8"> <div class="title">강화학습 기반 지구 저궤도 위성 제어 및 통신</div> <div class="author"> <em>Gyu Seon Kim</em>, Soohyun Park, and Joongheon Kim </div> <div class="periodical"> </div> <div class="periodical"> 한국정보과학회논문지 (Under Revision) </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">RL_LEO_Control_Communication_KR</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Kim, Gyu Seon and Park, Soohyun and Kim, Joongheon}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{강화학습 기반 지구 저궤도 위성 제어 및 통신}</span><span class="p">,</span>
   <span class="na">note</span> <span class="p">=</span> <span class="s">{한국정보과학회논문지 (Under Revision)}</span><span class="p">,</span>
@@ -56,7 +80,11 @@
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{176--184}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.7840/kics.2023.48.2.176}</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002930352}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gyu Seon Kim. © Gyu Seon Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> </div> <script>
+  document.querySelectorAll(".numbered-publications ol.bibliography > li").forEach((entry, index, entries) => {
+    entry.dataset.publicationNumber = entries.length - index;
+  });
+</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gyu Seon Kim. © Gyu Seon Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
