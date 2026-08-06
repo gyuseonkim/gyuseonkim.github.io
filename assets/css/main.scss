@@ -78,6 +78,61 @@
   }
 }
 
+/* Add compact labels above the contact icons on the About page. */
+.social .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.75rem 0.85rem;
+
+  a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 5rem;
+    line-height: 1;
+
+    &::before {
+      margin-bottom: 0.35rem;
+      color: var(--global-text-color-light);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    &:hover::before {
+      color: var(--global-theme-color);
+    }
+  }
+
+  a[title="Scholar userid"]::before {
+    content: "Google Scholar";
+  }
+
+  a[title="Linkedin username"]::before {
+    content: "LinkedIn";
+  }
+
+  a[title="Cv pdf"]::before {
+    content: "CV";
+  }
+
+  a[title="Orcid id"]::before {
+    content: "ORCID";
+  }
+
+  a[title="Email"]::before {
+    content: "Email";
+  }
+
+  a[title="Github username"]::before {
+    content: "GitHub";
+  }
+}
+
 /* Keep the About background clear of the floated profile and responsive. */
 .about-background {
   clear: both;
