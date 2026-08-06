@@ -1,0 +1,85 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{site.max_width | default: "930px"}}
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* Keep the site-specific Education treatment scoped to the CV card. */
+.cv #education + .card {
+  .list-group-item > .row > .date-column {
+    transform: none;
+  }
+
+  table.table-cv {
+    td,
+    th {
+      border-top: 0;
+    }
+  }
+
+  .list-group-item > .row > .date-column::before {
+    display: block;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 0.45rem;
+    content: "";
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 50%;
+  }
+
+  .list-group-item:nth-child(1) > .row > .date-column::before {
+    background-image: url("../img/korea-university-emblem.png");
+    background-size: 90%;
+  }
+
+  .list-group-item:nth-child(2) > .row > .date-column::before {
+    background-image: url("../img/inha-university-emblem.png");
+    background-size: 72%;
+  }
+}
+
+@media (min-width: 576px) {
+  .cv #education + .card {
+    .date-column {
+      flex: 0 0 150px;
+      max-width: 150px;
+    }
+
+    .date-column + div {
+      flex: 0 0 calc(100% - 150px);
+      max-width: calc(100% - 150px);
+    }
+  }
+}
