@@ -93,4 +93,18 @@ nav: false
   document.querySelectorAll(".numbered-publications ol.bibliography > li").forEach((entry, index, entries) => {
     entry.dataset.publicationNumber = entries.length - index;
   });
+
+  document.querySelectorAll(".numbered-publications .links").forEach((links) => {
+    const bibButton = links.querySelector(".bibtex");
+    const linkButtons = [...links.querySelectorAll("a")];
+    const doiButton = linkButtons.find((link) => link.textContent.trim() === "DOI");
+    const htmlButton = linkButtons.find((link) => link.textContent.trim() === "HTML");
+    const publicationLink = doiButton ?? htmlButton;
+
+    if (!publicationLink) return;
+
+    publicationLink.textContent = "DOI";
+    if (bibButton) links.insertBefore(publicationLink, bibButton);
+    if (doiButton && htmlButton) htmlButton.remove();
+  });
 </script>

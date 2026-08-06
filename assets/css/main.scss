@@ -35,6 +35,10 @@
 
 /* Keep the site-specific Education treatment scoped to the CV card. */
 .cv #education + .card {
+  .list-group-item {
+    list-style: none;
+  }
+
   .location .iconlocation {
     display: none;
   }
@@ -71,6 +75,112 @@
   .list-group-item:nth-child(2) > .row > .date-column::before {
     background-image: url("../img/inha-university-emblem.png");
     background-size: 72%;
+  }
+}
+
+/* Keep the About background clear of the floated profile and responsive. */
+.about-background {
+  clear: both;
+  padding: 2.5rem 0 0.5rem;
+
+  > h2 {
+    margin-bottom: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 225px;
+    padding: 1.25rem;
+    overflow: hidden;
+    background: var(--global-card-bg-color, var(--global-bg-color));
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 3px;
+      content: "";
+      background: var(--global-theme-color);
+    }
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.12rem;
+    }
+  }
+
+  &__logo {
+    display: grid;
+    width: 70px;
+    height: 70px;
+    padding: 0.55rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 50%;
+    place-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__eyebrow {
+    margin: 0 0 0.25rem;
+    color: var(--global-theme-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__detail {
+    margin: 0;
+    color: var(--global-text-color-light);
+    line-height: 1.45;
+  }
+}
+
+@media (hover: hover) {
+  .about-background__card:hover {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 767px) {
+  .about-background__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-background__card {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-background__card {
+    transition: none;
   }
 }
 
