@@ -334,11 +334,11 @@
         selfAuthor.append(createCoFirstMark());
       }
 
-      if (selfAuthor && !authorLine.querySelector(":scope > .co-first-label")) {
+      if (selfAuthor && !selfAuthor.querySelector(":scope > .co-first-label")) {
         const label = document.createElement("span");
         label.className = "co-first-label";
         label.textContent = " (co-first author)";
-        selfAuthor.insertAdjacentElement("afterend", label);
+        selfAuthor.append(label);
       }
 
       if (!authorLine.nextElementSibling?.classList.contains("co-first-note")) {
