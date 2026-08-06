@@ -50,6 +50,32 @@ nav: false
 </div>
 
 <script>
+  const getConferenceBibtexField = (entry, field) => {
+    const bibtex = entry.querySelector(".bibtex code")?.textContent;
+    if (!bibtex) return "";
+
+    const match = bibtex.match(new RegExp(`^\\s*${field}\\s*=\\s*\\{([^{}]*)\\},?\\s*$`, "mi"));
+    return match?.[1]?.trim() ?? "";
+  };
+
+  document.querySelectorAll(".numbered-publications ol.bibliography > li").forEach((entry) => {
+    const periodical = entry.querySelector(".periodical");
+    const proceedings = periodical?.querySelector("em");
+    const address = getConferenceBibtexField(entry, "address");
+    const month = getConferenceBibtexField(entry, "month");
+    const year = getConferenceBibtexField(entry, "year");
+    const pages = getConferenceBibtexField(entry, "pages").replaceAll("--", "-");
+
+    if (!periodical || !proceedings || !address || !year) return;
+
+    proceedings.textContent = proceedings.textContent.replace(/^In\s+/i, "").trim();
+
+    const details = [address, [month, year].filter(Boolean).join(" ")];
+    if (pages) details.push(`pp. ${pages}`);
+
+    periodical.replaceChildren(document.createTextNode("in "), proceedings, document.createTextNode(`, ${details.join(", ")}.`));
+  });
+
   document.querySelectorAll(".numbered-publications ol.bibliography > li").forEach((entry, index, entries) => {
     entry.dataset.publicationNumber = entries.length - index;
   });
