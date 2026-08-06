@@ -45,10 +45,6 @@
     align-items: start;
   }
 
-  .location .iconlocation {
-    display: none;
-  }
-
   .list-group-item > .row > .date-column {
     display: contents;
     transform: none;
@@ -96,6 +92,7 @@
     display: block;
     grid-column: 1;
     grid-row: 1 / span 2;
+    align-self: center;
     justify-self: center;
     width: 58px;
     height: 58px;
@@ -114,7 +111,7 @@
 
   .list-group-item:nth-child(2) > .row::before {
     background-image: url("../img/inha-university-emblem.svg");
-    background-size: 72%;
+    background-size: 94%;
   }
 }
 
