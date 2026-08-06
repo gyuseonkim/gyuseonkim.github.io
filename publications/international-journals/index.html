@@ -10,6 +10,22 @@
     font-weight: 700;
   }
 
+  .publications .co-first-label {
+    font-weight: 700;
+  }
+
+  .publications .co-first-note {
+    margin-top: 0.15rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .publications .co-first-entry .more-authors {
+    color: inherit;
+    cursor: default;
+    border-bottom: 0;
+  }
+
   .numbered-publications {
     counter-reset: publication-number 30;
   }
@@ -295,13 +311,62 @@
   document
     .querySelectorAll('.numbered-publications .author > [data-content="Gyu Seon Kim is a co-first author."]')
     .forEach((annotation) => {
-      const selfAuthor = annotation.parentElement.querySelector(":scope > em");
+      const authorLine = annotation.parentElement;
+      const selfAuthor = authorLine.querySelector(":scope > em");
+      const firstAuthor = Array.from(authorLine.childNodes).find(
+        (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim(),
+      );
 
-      if (selfAuthor && !annotation.parentElement.querySelector(":scope > .co-first-label")) {
+      if (firstAuthor && !firstAuthor.textContent.includes("†")) {
+        firstAuthor.textContent = firstAuthor.textContent.replace(/^(\s*[^,]+)(,)/, "$1†$2");
+      }
+
+      if (selfAuthor && !selfAuthor.textContent.endsWith("†")) {
+        selfAuthor.append("†");
+      }
+
+      if (selfAuthor && !authorLine.querySelector(":scope > .co-first-label")) {
         const label = document.createElement("span");
         label.className = "co-first-label";
-        label.textContent = " (co-first)";
+        label.textContent = " (co-first author)";
         selfAuthor.insertAdjacentElement("afterend", label);
+      }
+
+      const moreAuthors = authorLine.querySelector(":scope > .more-authors");
+
+      if (moreAuthors && /more authors?$/.test(moreAuthors.textContent.trim())) {
+        const hiddenAuthors = moreAuthors
+          .getAttribute("onclick")
+          ?.match(/more_authors_text\s*=[\s\S]*?\?\s*'([^']+)'\s*:/)?.[1]
+          ?.split(", ");
+
+        if (hiddenAuthors?.length) {
+          const precedingText = moreAuthors.previousSibling;
+
+          if (hiddenAuthors.length > 1 && precedingText?.nodeType === Node.TEXT_NODE) {
+            precedingText.textContent = precedingText.textContent.replace(/,\s+and\s*$/, ", ");
+          }
+
+          moreAuthors.textContent =
+            hiddenAuthors.length > 1
+              ? `${hiddenAuthors.slice(0, -1).join(", ")}, and ${hiddenAuthors.at(-1)}`
+              : hiddenAuthors[0];
+        } else {
+          moreAuthors.click();
+        }
+
+        moreAuthors.removeAttribute("onclick");
+        moreAuthors.removeAttribute("title");
+      }
+
+      const entry = authorLine.closest("li");
+      entry?.classList.add("co-first-entry");
+
+      if (!authorLine.nextElementSibling?.classList.contains("co-first-note")) {
+        const note = document.createElement("div");
+        note.className = "co-first-note";
+        note.textContent = "† These authors contributed equally.";
+        authorLine.insertAdjacentElement("afterend", note);
       }
 
       annotation.remove();
