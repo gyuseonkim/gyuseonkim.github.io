@@ -58,7 +58,7 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Doctoral Degree</p>
       <h3><strong>Korea University</strong>, Seoul, Republic of Korea</h3>
-      <p class="about-background__detail">Ph.D. in <strong>Electrical and Computer Engineering</strong></p>
+      <p class="about-background__detail"><strong>Ph.D.</strong> in <strong>Electrical and Computer Engineering</strong></p>
     </article>
 
     <article class="about-background__card">
@@ -67,7 +67,7 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Bachelor's Degree</p>
       <h3><strong>Inha University</strong>, Incheon, Republic of Korea</h3>
-      <p class="about-background__detail">B.S. in <strong>Aerospace Engineering</strong></p>
+      <p class="about-background__detail"><strong>B.S.</strong> in <strong>Aerospace Engineering</strong></p>
     </article>
 
   </div>
