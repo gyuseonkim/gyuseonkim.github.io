@@ -35,6 +35,10 @@
 
 /* Keep the site-specific Education treatment scoped to the CV card. */
 .cv #education + .card {
+  .location .iconlocation {
+    display: none;
+  }
+
   .list-group-item > .row > .date-column {
     transform: none;
   }
