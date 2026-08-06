@@ -60,7 +60,7 @@ My research interests include:
 
     <article class="about-background__card">
       <div class="about-background__logo">
-        <img src="{{ '/assets/img/inha-university-emblem.png' | relative_url }}" alt="Inha University emblem">
+        <img src="{{ '/assets/img/inha-university-emblem.svg' | relative_url }}" alt="Inha University emblem">
       </div>
       <p class="about-background__eyebrow">Bachelor's Degree</p>
       <h3>Inha University</h3>
