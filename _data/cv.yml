@@ -12,9 +12,8 @@ cv:
       username: gyu-seon-kim-67b849391
 
   sections:
-    Profile:
-      - bullet: "Ph.D., Aerospace AI Research Engineer at the R&D Center, RealtimeVisual Co., Ltd., Seoul, Republic of Korea"
-      - bullet: "Member of the IEEE"
+    Current Position:
+      - bullet: "Aerospace AI Research Engineer at the R&D Center, RealtimeVisual Co., Ltd., Seoul, Republic of Korea"
       
 
     Research Interests:
