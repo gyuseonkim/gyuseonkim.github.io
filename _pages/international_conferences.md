@@ -13,7 +13,9 @@ nav: false
 
 <style>
   .publications .author > em {
+    font-style: normal;
     font-weight: 700;
+    text-decoration: underline;
   }
 
   .numbered-publications {

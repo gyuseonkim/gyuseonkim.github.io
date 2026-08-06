@@ -13,7 +13,9 @@ nav: false
 
 <style>
   .publications .author > em {
+    font-style: normal;
     font-weight: 700;
+    text-decoration: underline;
   }
 
   .numbered-publications {
@@ -51,9 +53,11 @@ nav: false
 
 {% bibliography --group_by none --query @unpublished[category=international_journal&&note~=Under.Revision] %}
 
-<h2>Published and Early Access</h2>
+<h2>Published</h2>
 
-{% bibliography --query @article[category=international_journal] %}
+{% bibliography --group_by none --query @article[category=international_journal&&note~=Early.Access] %}
+
+{% bibliography --query @article[category=international_journal&&note!~Early.Access] %}
 
 </div>
 
@@ -64,7 +68,30 @@ nav: false
         node.textContent = node.textContent.replace(/\s+,/g, ",");
       }
     });
+
+    const reviewStatus = periodical.textContent.trim().match(/^(.+?)\s+(\(Under (?:Review|Revision)\))$/);
+
+    if (reviewStatus) {
+      const journal = document.createElement("em");
+      journal.textContent = reviewStatus[1];
+      periodical.replaceChildren(journal, document.createTextNode(` ${reviewStatus[2]}`));
+    }
   });
+
+  document
+    .querySelectorAll('.numbered-publications .author > [data-content="Gyu Seon Kim is a co-first author."]')
+    .forEach((annotation) => {
+      const selfAuthor = annotation.parentElement.querySelector(":scope > em");
+
+      if (selfAuthor && !annotation.parentElement.querySelector(":scope > .co-first-label")) {
+        const label = document.createElement("span");
+        label.className = "co-first-label";
+        label.textContent = " (co-first)";
+        selfAuthor.insertAdjacentElement("afterend", label);
+      }
+
+      annotation.remove();
+    });
 
   document.querySelectorAll(".numbered-publications ol.bibliography > li").forEach((entry, index, entries) => {
     entry.dataset.publicationNumber = entries.length - index;

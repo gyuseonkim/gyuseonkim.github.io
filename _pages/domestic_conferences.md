@@ -13,7 +13,9 @@ nav: false
 
 <style>
   .publications .author > em {
+    font-style: normal;
     font-weight: 700;
+    text-decoration: underline;
   }
 
   .numbered-publications {
@@ -50,6 +52,14 @@ nav: false
 </div>
 
 <script>
+  document.querySelectorAll(".numbered-publications .periodical").forEach((periodical) => {
+    periodical.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = node.textContent.replace(/\s+,/g, ",");
+      }
+    });
+  });
+
   document.querySelectorAll(".numbered-publications ol.bibliography > li").forEach((entry, index, entries) => {
     entry.dataset.publicationNumber = entries.length - index;
   });
