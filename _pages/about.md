@@ -69,3 +69,22 @@ My research interests include:
 
   </div>
 </section>
+
+<section class="about-background" aria-labelledby="industry-background-heading">
+  <h2 id="industry-background-heading">Industry Background</h2>
+  <div class="about-background__grid about-background__grid--single">
+    <article class="about-background__card about-background__card--industry">
+      <div class="about-background__logo about-background__logo--company">
+        <img src="{{ '/assets/img/realtimevisual-logo.png' | relative_url }}" alt="RealtimeVisual company logo">
+      </div>
+      <div class="about-background__copy">
+        <p class="about-background__eyebrow">Current Position</p>
+        <h3>RealtimeVisual Co., Ltd.</h3>
+        <p class="about-background__detail"><em>Aerospace AI Research Engineer (Military Service Exception)</em></p>
+        <p class="about-background__detail about-background__detail--description">
+          Research on reinforcement learning-based flight control for fighter aircraft and other aerial vehicles, with a focus on sim-to-real policy transfer to physical flight platforms.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
