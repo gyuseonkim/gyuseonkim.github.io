@@ -120,6 +120,10 @@
     content: "CV";
   }
 
+  a[title*="Ieee id"]::before {
+    content: "IEEE Xplore";
+  }
+
   a[title*="Orcid id"]::before {
     content: "ORCID";
   }
