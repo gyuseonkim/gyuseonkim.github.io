@@ -15,7 +15,6 @@ nav: false
   .publications .author > em {
     font-style: normal;
     font-weight: 700;
-    text-decoration: underline;
   }
 
   .numbered-publications {
@@ -52,6 +51,37 @@ nav: false
 </div>
 
 <script>
+  const formatDomesticPublicationTitle = (title) => {
+    const titleText = title.textContent.trim();
+    if (!titleText.endsWith(")")) return;
+
+    let depth = 0;
+    let englishTitleStart = -1;
+
+    for (let index = titleText.length - 1; index >= 0; index -= 1) {
+      if (titleText[index] === ")") depth += 1;
+      if (titleText[index] === "(") {
+        depth -= 1;
+        if (depth === 0) {
+          englishTitleStart = index;
+          break;
+        }
+      }
+    }
+
+    if (englishTitleStart < 1) return;
+
+    const koreanTitle = titleText.slice(0, englishTitleStart).trim();
+    const englishTitle = titleText.slice(englishTitleStart + 1, -1).trim();
+    if (!koreanTitle || !englishTitle) return;
+
+    const englishTitleLine = document.createElement("span");
+    englishTitleLine.textContent = `- ${englishTitle} -`;
+    title.replaceChildren(document.createTextNode(koreanTitle), document.createElement("br"), englishTitleLine);
+  };
+
+  document.querySelectorAll(".numbered-publications .title").forEach(formatDomesticPublicationTitle);
+
   document.querySelectorAll(".numbered-publications .periodical").forEach((periodical) => {
     periodical.childNodes.forEach((node) => {
       if (node.nodeType === Node.TEXT_NODE) {
