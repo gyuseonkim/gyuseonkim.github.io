@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/international-journals/
-title: International Journals
+title: International Journals (SCI)
 description: Peer-reviewed international journal publications.
 nav: false
 ---
