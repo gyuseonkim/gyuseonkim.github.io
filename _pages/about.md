@@ -28,7 +28,7 @@ latest_posts:
 
 I am a research engineer specializing in **Reinforcement Learning**, **Quantum Machine Learning**, and **Autonomous Aerospace Systems**. My research focuses on developing advanced reinforcement learning for **Fighter Aircraft**, **Unmanned Aerial Vehicles (UAVs)**, **Urban Air Mobility (UAM)**, and **Satellite Systems**.
 
-I am currently an Aerospace AI Research Engineer at **RealtimeVisual Co., Ltd.** in Seoul, Republic of Korea. My research centers on reinforcement-learning-based control algorithms for fighter aircraft and other aerospace vehicles, with a particular focus on **sim-to-real transfer** to facilitate the reliable deployment of learned control policies on real-world flight platforms.
+I am currently an **Aerospace AI Research Engineer** at **RealtimeVisual Co., Ltd.** in Seoul, Republic of Korea. My research centers on reinforcement-learning-based control algorithms for fighter aircraft and other aerospace vehicles, with a particular focus on **sim-to-real transfer** to facilitate the reliable deployment of learned control policies on real-world flight platforms.
 
 
 My research interests include:
