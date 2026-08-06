@@ -48,7 +48,7 @@ My research interests include:
         <img src="{{ '/assets/img/university-of-houston-interlock.png' | relative_url }}" alt="University of Houston interlocking UH logo">
       </div>
       <p class="about-background__eyebrow">Research Experience</p>
-      <h3>University of Houston, Houston, TX, USA</h3>
+      <h3>**University of Houston**, Houston, TX, USA</h3>
       <p class="about-background__detail">Visiting Researcher, Department of Electrical and Computer Engineering</p>
     </article>
 
