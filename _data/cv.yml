@@ -26,10 +26,12 @@ cv:
     Education:
       - institution: "**Korea University** - College of Engineering"
         location: Seoul, Republic of Korea
+        area: ""
         degree: Ph.D. in Electrical and Computer Engineering
 
       - institution: "**Inha University** - College of Engineering"
         location: Incheon, Republic of Korea
+        area: ""
         degree: B.S. in Aerospace Engineering
 
     Academic Background:
