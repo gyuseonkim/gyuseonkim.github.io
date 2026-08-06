@@ -49,7 +49,7 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Research Experience</p>
       <h3><strong>University of Houston</strong>, Houston, TX, USA</h3>
-      <p class="about-background__detail">Visiting Researcher, <strong>Department of Electrical and Computer Engineering</strong></p>
+      <p class="about-background__detail"><strong>Visiting Scholar</strong>, <strong>Department of Electrical and Computer Engineering</strong></p>
     </article>
 
     <article class="about-background__card">
