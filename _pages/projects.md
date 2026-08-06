@@ -7,8 +7,6 @@ nav: true
 nav_order: 3
 ---
 
-## R&D Project Experience
-
 <ol reversed start="18" class="pl-4">
   <li class="mb-4">
     <p class="mb-1"><strong>Development of an Air-to-Air Combat Software Verification Environment</strong></p>
