@@ -58,7 +58,7 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Doctoral Degree</p>
       <h3><strong>Korea University</strong>, Seoul, Republic of Korea</h3>
-      <p class="about-background__detail"><strong>Ph.D.</strong> in <strong>Electrical and Computer Engineering</strong></p>
+      <p class="about-background__detail"><strong>Ph.D. in Electrical and Computer Engineering</strong></p>
     </article>
 
     <article class="about-background__card">
@@ -67,7 +67,7 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Bachelor's Degree</p>
       <h3><strong>Inha University</strong>, Incheon, Republic of Korea</h3>
-      <p class="about-background__detail"><strong>B.S.</strong> in <strong>Aerospace Engineering</strong></p>
+      <p class="about-background__detail"><strong>B.S. in Aerospace Engineering</strong></p>
     </article>
 
   </div>
@@ -82,8 +82,8 @@ My research interests include:
       </div>
       <div class="about-background__copy">
         <p class="about-background__eyebrow">Current Position</p>
-        <h3>RealtimeVisual Co., Ltd.</h3>
-        <p class="about-background__detail"><em>Aerospace AI Research Engineer (Military Service Exception)</em></p>
+        <h3><strong>RealtimeVisual Co., Ltd.</strong></h3>
+        <p class="about-background__detail"><em><strong>Aerospace AI Research Engineer (Military Service Exception)<strong></em></p>
         <p class="about-background__detail about-background__detail--description">
           Research on reinforcement learning-based flight control for fighter aircraft and other aerial vehicles, with a focus on sim-to-real policy transfer to physical flight platforms.
         </p>
