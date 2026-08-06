@@ -39,26 +39,66 @@
     list-style: none;
   }
 
+  .list-group-item > .row {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    align-items: start;
+  }
+
   .location .iconlocation {
     display: none;
   }
 
   .list-group-item > .row > .date-column {
+    display: contents;
     transform: none;
   }
 
-  table.table-cv {
+  .list-group-item > .row > .date-column > table.table-cv {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    width: auto;
+    margin: 0;
+    padding-right: 15px;
+    padding-left: calc(15px + 0.25rem);
+    text-align: left;
+
+    tbody,
+    tr,
+    td {
+      display: block;
+    }
+
     td,
     th {
       border-top: 0;
     }
+
+    .location {
+      margin: 0;
+      white-space: normal;
+    }
   }
 
-  .list-group-item > .row > .date-column::before {
+  .list-group-item > .row > .date-column + div {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    max-width: none;
+
+    > h6:last-child:empty {
+      display: none;
+    }
+  }
+
+  .list-group-item > .row::before {
     display: block;
-    width: 52px;
-    height: 52px;
-    margin: 0 auto 0.45rem;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    width: 58px;
+    height: 58px;
     content: "";
     background-color: #fff;
     background-position: center;
@@ -67,12 +107,12 @@
     border-radius: 50%;
   }
 
-  .list-group-item:nth-child(1) > .row > .date-column::before {
+  .list-group-item:nth-child(1) > .row::before {
     background-image: url("../img/korea-university-emblem.png");
     background-size: 90%;
   }
 
-  .list-group-item:nth-child(2) > .row > .date-column::before {
+  .list-group-item:nth-child(2) > .row::before {
     background-image: url("../img/inha-university-emblem.svg");
     background-size: 72%;
   }
@@ -303,14 +343,16 @@
 
 @media (min-width: 576px) {
   .cv #education + .card {
-    .date-column {
-      flex: 0 0 150px;
-      max-width: 150px;
+    .list-group-item > .row {
+      grid-template-columns: 150px minmax(0, 1fr);
     }
+  }
+}
 
-    .date-column + div {
-      flex: 0 0 calc(100% - 150px);
-      max-width: calc(100% - 150px);
+@media (min-width: 768px) {
+  .cv #education + .card {
+    .list-group-item > .row > .date-column > table.table-cv {
+      padding-left: calc(15px + 1.5rem);
     }
   }
 }
