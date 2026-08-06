@@ -6,7 +6,7 @@ subtitle: Research Engineer at RealtimeVisual Co., Ltd. | Reinforcement Learning
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: gyu-seon-kim-profile.jpg
   image_circular: false
   more_info: >
     <p>RealtimeVisual Co., Ltd.</p>
