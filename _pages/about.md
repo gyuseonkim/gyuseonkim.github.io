@@ -48,7 +48,7 @@ My research interests include:
         <img src="{{ '/assets/img/university-of-houston-interlock.png' | relative_url }}" alt="University of Houston interlocking UH logo">
       </div>
       <p class="about-background__eyebrow">Research Experience</p>
-      <h3>University of Houston</h3>
+      <h3>University of Houston, Houston, TX, USA</h3>
       <p class="about-background__detail">Visiting Researcher, Department of Electrical and Computer Engineering</p>
     </article>
 
@@ -57,7 +57,7 @@ My research interests include:
         <img src="{{ '/assets/img/korea-university-emblem.png' | relative_url }}" alt="Korea University emblem">
       </div>
       <p class="about-background__eyebrow">Doctoral Degree</p>
-      <h3>Korea University</h3>
+      <h3>Korea University, Seoul, Republic of Korea</h3>
       <p class="about-background__detail">Ph.D. in Electrical and Computer Engineering</p>
     </article>
 
@@ -66,7 +66,7 @@ My research interests include:
         <img src="{{ '/assets/img/inha-university-emblem.svg' | relative_url }}" alt="Inha University emblem">
       </div>
       <p class="about-background__eyebrow">Bachelor's Degree</p>
-      <h3>Inha University</h3>
+      <h3>Inha University, Incheon, Republic of Korea</h3>
       <p class="about-background__detail">B.S. in Aerospace Engineering</p>
     </article>
 
