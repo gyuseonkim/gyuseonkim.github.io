@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/domestic-journals/
-title: Domestic Journals
+title: Domestic Journals (KCI)
 description: Peer-reviewed domestic journal publications.
 nav: false
 ---
