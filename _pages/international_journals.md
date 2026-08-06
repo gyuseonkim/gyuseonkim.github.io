@@ -139,4 +139,26 @@ nav: false
   document.querySelectorAll(".numbered-publications ol.bibliography > li").forEach((entry, index, entries) => {
     entry.dataset.publicationNumber = entries.length - index;
   });
+
+  const orderPublicationButtons = (links) => {
+    const buttons = [...links.children];
+    const abstractButton = buttons.find(
+      (button) => button.classList.contains("abstract") && button.textContent.trim() === "Abs",
+    );
+    const bibButton = buttons.find((button) => button.classList.contains("bibtex"));
+    const awardButton = buttons.find((button) => button.classList.contains("award"));
+    const linkButtons = buttons.filter((button) => button.matches("a"));
+    const doiButton = linkButtons.find((link) => link.textContent.trim() === "DOI");
+    const htmlButton = linkButtons.find((link) => link.textContent.trim() === "HTML");
+    const publicationButton = doiButton ?? htmlButton;
+
+    if (abstractButton) abstractButton.textContent = "Abstract";
+    if (publicationButton) publicationButton.textContent = "DOI";
+    if (doiButton && htmlButton) htmlButton.remove();
+
+    links.prepend(...[abstractButton, publicationButton, bibButton].filter(Boolean));
+    if (awardButton) links.append(awardButton);
+  };
+
+  document.querySelectorAll(".numbered-publications .links").forEach(orderPublicationButtons);
 </script>

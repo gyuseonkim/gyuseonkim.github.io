@@ -94,17 +94,25 @@ nav: false
     entry.dataset.publicationNumber = entries.length - index;
   });
 
-  document.querySelectorAll(".numbered-publications .links").forEach((links) => {
-    const bibButton = links.querySelector(".bibtex");
-    const linkButtons = [...links.querySelectorAll("a")];
+  const orderPublicationButtons = (links) => {
+    const buttons = [...links.children];
+    const abstractButton = buttons.find(
+      (button) => button.classList.contains("abstract") && button.textContent.trim() === "Abs",
+    );
+    const bibButton = buttons.find((button) => button.classList.contains("bibtex"));
+    const awardButton = buttons.find((button) => button.classList.contains("award"));
+    const linkButtons = buttons.filter((button) => button.matches("a"));
     const doiButton = linkButtons.find((link) => link.textContent.trim() === "DOI");
     const htmlButton = linkButtons.find((link) => link.textContent.trim() === "HTML");
-    const publicationLink = doiButton ?? htmlButton;
+    const publicationButton = doiButton ?? htmlButton;
 
-    if (!publicationLink) return;
-
-    publicationLink.textContent = "DOI";
-    if (bibButton) links.insertBefore(publicationLink, bibButton);
+    if (abstractButton) abstractButton.textContent = "Abstract";
+    if (publicationButton) publicationButton.textContent = "DOI";
     if (doiButton && htmlButton) htmlButton.remove();
-  });
+
+    links.prepend(...[abstractButton, publicationButton, bibButton].filter(Boolean));
+    if (awardButton) links.append(awardButton);
+  };
+
+  document.querySelectorAll(".numbered-publications .links").forEach(orderPublicationButtons);
 </script>
