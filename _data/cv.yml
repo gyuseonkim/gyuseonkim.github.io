@@ -13,7 +13,9 @@ cv:
 
   sections:
     Profile:
-      - bullet: "Ph.D., Aerospace AI Research Engineer at the R&D Center, RealtimeVisual Co., Ltd., Seoul, Republic of Korea. Member of the IEEE."
+      - bullet: "Ph.D., Aerospace AI Research Engineer at the R&D Center, RealtimeVisual Co., Ltd., Seoul, Republic of Korea"
+      - bullet: "Member of the IEEE"
+      
 
     Research Interests:
       - bullet: "**Autonomous Aerospace Systems:** Control and Communication for Autonomous Aerospace Systems (e.g., Aircraft, Drone, UAV, UAM, Fixed Wing, Rotary Wing, Rotorcraft, Launch Vehicles, and Spacecraft)"
