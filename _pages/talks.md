@@ -4,7 +4,7 @@ permalink: /talks/
 title: Talks
 description: Invited talks, lectures, and workshops.
 nav: true
-nav_order: 9
+nav_order: 6
 ---
 
 <ol reversed start="9" class="pl-4">
