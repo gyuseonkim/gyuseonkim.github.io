@@ -30,7 +30,6 @@ I am a research engineer specializing in **Reinforcement Learning**, **Quantum M
 
 I am currently an **Aerospace AI Research Engineer** at **RealtimeVisual Co., Ltd.** in Seoul, Republic of Korea. My research centers on reinforcement-learning-based control algorithms for fighter aircraft and other aerospace vehicles, with a particular focus on **Sim-to-Real Transfer** to facilitate the reliable deployment of learned control policies on real-world flight platforms.
 
-
 My research interests include:
 
 - Reinforcement learning, multi-agent reinforcement learning, and quantum machine learning
@@ -53,7 +52,7 @@ My research interests include:
     </article>
 
     <article class="about-background__card">
-      <div class="about-background__logo">
+      <div class="about-background__logo about-background__logo--cv about-background__logo--korea">
         <img src="{{ '/assets/img/korea-university-emblem.png' | relative_url }}" alt="Korea University emblem">
       </div>
       <p class="about-background__eyebrow">Doctoral Degree</p>
@@ -62,7 +61,7 @@ My research interests include:
     </article>
 
     <article class="about-background__card">
-      <div class="about-background__logo">
+      <div class="about-background__logo about-background__logo--cv about-background__logo--inha">
         <img src="{{ '/assets/img/inha-university-emblem.svg' | relative_url }}" alt="Inha University emblem">
       </div>
       <p class="about-background__eyebrow">Bachelor's Degree</p>
