@@ -14,7 +14,6 @@ cv:
   sections:
     Current Position:
       - bullet: "Aerospace AI Research Engineer (Military Service Exception) at the R&D Center, RealtimeVisual Co., Ltd., Seoul, Republic of Korea"
-      
 
     Research Interests:
       - bullet: "**Autonomous Aerospace Systems:** Control and Communication for Autonomous Aerospace Systems (e.g., Aircraft, Drone, UAV, UAM, Fixed Wing, Rotary Wing, Rotorcraft, Launch Vehicles, and Spacecraft)"
@@ -33,6 +32,10 @@ cv:
         location: Incheon, Republic of Korea
         area: ""
         degree: B.S. in Aerospace Engineering
+
+    Publications and Patents:
+      - bullet: "**Papers — 63:** 29 International Journal Papers (SCI), 12 International Conference Papers, 5 Domestic Journal Papers (KCI), and 17 Domestic Conference Papers (Korean)."
+      - bullet: "**Patents — 9:** 1 United States patent application and 8 Republic of Korea patent applications/registrations."
 
     Academic Background:
       - bullet: "**Korea University - Research Institute of Information and Communication Technology**, Seoul, Republic of Korea - *Postdoctoral Researcher*"
