@@ -83,7 +83,7 @@ My research interests include:
       <div class="about-background__copy">
         <p class="about-background__eyebrow">Current Position</p>
         <h3><strong>RealtimeVisual Co., Ltd.</strong></h3>
-        <p class="about-background__detail"><em><strong>Aerospace AI Research Engineer (Military Service Exception)<strong></em></p>
+        <p class="about-background__detail"><em><strong>Aerospace AI Research Engineer (Military Service Exception)</strong>strong></em></p>
         <p class="about-background__detail about-background__detail--description">
           Research on reinforcement learning-based flight control for fighter aircraft and other aerial vehicles, with a focus on sim-to-real policy transfer to physical flight platforms.
         </p>
