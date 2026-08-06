@@ -33,12 +33,12 @@ I am currently an **Aerospace AI Research Engineer** at **RealtimeVisual Co., Lt
 
 My research interests include:
 
-- Reinforcement learning and multi-agent reinforcement learning
-- Guidance, navigation, and control (GNC)
-- Intelligent flight control for aircraft and UAVs
-- Autonomous UAM and multi-UAV systems
-- Satellite autonomy and LEO satellite networks
-- Sim-to-real learning for aerospace systems
+- Reinforcement learning, multi-agent reinforcement learning, and quantum machine learning
+- Guidance, navigation, and control (GNC) for aerospace systems
+- Artificial intelligence (AI)-based intelligent flight control for aircraft and UAVs
+- Autonomous coordination and swarm control of UAM and UAV Fleets
+- Autonomous satellite systems and low Earth orbit (LEO) satellite networks
+- Sim-to-real transfer and real-world deployment of reinforcement-learning-based flight control policies
 
 <section class="about-background" aria-labelledby="background-heading">
   <h2 id="background-heading">Academic Background</h2>
