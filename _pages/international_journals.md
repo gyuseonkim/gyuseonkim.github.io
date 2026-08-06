@@ -21,6 +21,12 @@ nav: false
     font-weight: 700;
   }
 
+  .publications .co-first-mark {
+    font-size: 0.75em;
+    line-height: 0;
+    vertical-align: super;
+  }
+
   .publications .co-first-note {
     margin-top: 0.15rem;
     font-size: 0.9rem;
@@ -93,6 +99,13 @@ nav: false
     }
   });
 
+  const createCoFirstMark = () => {
+    const mark = document.createElement("sup");
+    mark.className = "co-first-mark";
+    mark.textContent = "†";
+    return mark;
+  };
+
   document
     .querySelectorAll('.numbered-publications .author > [data-content="Gyu Seon Kim is a co-first author."]')
     .forEach((annotation) => {
@@ -101,13 +114,15 @@ nav: false
       const firstAuthor = Array.from(authorLine.childNodes).find(
         (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim(),
       );
+      const firstAuthorParts = firstAuthor?.textContent.match(/^(\s*[^,]+)(,.*)$/);
 
-      if (firstAuthor && !firstAuthor.textContent.includes("†")) {
-        firstAuthor.textContent = firstAuthor.textContent.replace(/^(\s*[^,]+)(,)/, "$1†$2");
+      if (firstAuthorParts && !authorLine.querySelector(":scope > .co-first-mark")) {
+        firstAuthor.textContent = firstAuthorParts[1];
+        firstAuthor.after(createCoFirstMark(), document.createTextNode(firstAuthorParts[2]));
       }
 
-      if (selfAuthor && !selfAuthor.textContent.endsWith("†")) {
-        selfAuthor.append("†");
+      if (selfAuthor && !selfAuthor.querySelector(":scope > .co-first-mark")) {
+        selfAuthor.append(createCoFirstMark());
       }
 
       if (selfAuthor && !authorLine.querySelector(":scope > .co-first-label")) {
@@ -150,7 +165,7 @@ nav: false
       if (!authorLine.nextElementSibling?.classList.contains("co-first-note")) {
         const note = document.createElement("div");
         note.className = "co-first-note";
-        note.textContent = "† These authors contributed equally.";
+        note.append(createCoFirstMark(), document.createTextNode(" These authors contributed equally."));
         authorLine.insertAdjacentElement("afterend", note);
       }
 
