@@ -33,12 +33,6 @@ nav: false
     line-height: 1.4;
   }
 
-  .publications .co-first-entry .more-authors {
-    color: inherit;
-    cursor: default;
-    border-bottom: 0;
-  }
-
   .numbered-publications {
     counter-reset: publication-number {{ publication_counter_start }};
   }
@@ -131,36 +125,6 @@ nav: false
         label.textContent = " (co-first author)";
         selfAuthor.insertAdjacentElement("afterend", label);
       }
-
-      const moreAuthors = authorLine.querySelector(":scope > .more-authors");
-
-      if (moreAuthors && /more authors?$/.test(moreAuthors.textContent.trim())) {
-        const hiddenAuthors = moreAuthors
-          .getAttribute("onclick")
-          ?.match(/more_authors_text\s*=[\s\S]*?\?\s*'([^']+)'\s*:/)?.[1]
-          ?.split(", ");
-
-        if (hiddenAuthors?.length) {
-          const precedingText = moreAuthors.previousSibling;
-
-          if (hiddenAuthors.length > 1 && precedingText?.nodeType === Node.TEXT_NODE) {
-            precedingText.textContent = precedingText.textContent.replace(/,\s+and\s*$/, ", ");
-          }
-
-          moreAuthors.textContent =
-            hiddenAuthors.length > 1
-              ? `${hiddenAuthors.slice(0, -1).join(", ")}, and ${hiddenAuthors.at(-1)}`
-              : hiddenAuthors[0];
-        } else {
-          moreAuthors.click();
-        }
-
-        moreAuthors.removeAttribute("onclick");
-        moreAuthors.removeAttribute("title");
-      }
-
-      const entry = authorLine.closest("li");
-      entry?.classList.add("co-first-entry");
 
       if (!authorLine.nextElementSibling?.classList.contains("co-first-note")) {
         const note = document.createElement("div");
