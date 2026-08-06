@@ -42,11 +42,11 @@ My research interests include:
   <div class="about-background__grid">
     <article class="about-background__card">
       <div class="about-background__logo">
-        <img src="{{ '/assets/img/inha-university-emblem.png' | relative_url }}" alt="Inha University emblem">
+        <img src="{{ '/assets/img/university-of-houston-interlock.png' | relative_url }}" alt="University of Houston interlocking UH logo">
       </div>
-      <p class="about-background__eyebrow">Bachelor's Degree</p>
-      <h3>Inha University</h3>
-      <p class="about-background__detail">B.S. in Aerospace Engineering</p>
+      <p class="about-background__eyebrow">Research Experience</p>
+      <h3>University of Houston</h3>
+      <p class="about-background__detail">Visiting Researcher, Department of Electrical and Computer Engineering</p>
     </article>
 
     <article class="about-background__card">
@@ -60,11 +60,11 @@ My research interests include:
 
     <article class="about-background__card">
       <div class="about-background__logo">
-        <img src="{{ '/assets/img/university-of-houston-interlock.png' | relative_url }}" alt="University of Houston interlocking UH logo">
+        <img src="{{ '/assets/img/inha-university-emblem.png' | relative_url }}" alt="Inha University emblem">
       </div>
-      <p class="about-background__eyebrow">Research Experience</p>
-      <h3>University of Houston</h3>
-      <p class="about-background__detail">Visiting Researcher</p>
+      <p class="about-background__eyebrow">Bachelor's Degree</p>
+      <h3>Inha University</h3>
+      <p class="about-background__detail">B.S. in Aerospace Engineering</p>
     </article>
 
   </div>
