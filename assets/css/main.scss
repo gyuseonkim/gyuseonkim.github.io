@@ -108,27 +108,27 @@
     }
   }
 
-  a[title="Scholar userid"]::before {
+  > a:nth-child(1)::before {
     content: "Google Scholar";
   }
 
-  a[title="Linkedin username"]::before {
+  > a:nth-child(2)::before {
     content: "LinkedIn";
   }
 
-  a[title="Cv pdf"]::before {
+  > a:nth-child(3)::before {
     content: "CV";
   }
 
-  a[title="Orcid id"]::before {
+  > a:nth-child(4)::before {
     content: "ORCID";
   }
 
-  a[title="Email"]::before {
+  > a:nth-child(5)::before {
     content: "Email";
   }
 
-  a[title="Github username"]::before {
+  > a:nth-child(6)::before {
     content: "GitHub";
   }
 }
