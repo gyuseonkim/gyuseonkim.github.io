@@ -18,7 +18,7 @@ cv:
     Research Interests:
       - bullet: "**Autonomous Aerospace Systems:** Control and Communication for Autonomous Aerospace Systems (e.g., Aircraft, Drone, UAV, UAM, Fixed Wing, Rotary Wing, Rotorcraft, Launch Vehicles, and Spacecraft)"
       - bullet: "**AI for Defense and Military Applications:** Intelligent Control and Autonomous Decision-Making for Defense and Aerospace Systems (e.g., Fighter Aircraft, Military Drone, Anti Drone System, Missile, Decoy, and Torpedo)"
-      - bullet: "**Physical AI for Reinforcement-Learning-based Flight Control:** Developing reinforcement-learning-based flight controllers and enabling their closed-loop sim-to-real deployment on fighter aircraft and other real-world aerial platforms."
+      - bullet: '**Physical AI for Reinforcement-Learning-based Flight Control:** Developing reinforcement-learning-based flight controllers and enabling their closed-loop sim-to-real deployment on fighter aircraft and other real-world aerial platforms.'
       - bullet: "**MARL-based Autonomous Control:** Multi-Agent Reinforcement Learning for Cooperative and Networked Aerial Vehicle Systems"
       - bullet: "**RL-based Satellite Communication Systems:** Reinforcement Learning-based Communication and Networking for Satellite Systems (e.g., LEO Satellite Routing, Cube Satellite Design, Satellite Constellations, and Space-Air-Ground Integrated Networks)"
       - bullet: "**Quantum AI:** Quantum Reinforcement Learning for Aerospace Control and Communication Systems"
