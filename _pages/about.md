@@ -38,7 +38,7 @@ My research interests include:
 - AI-based intelligent flight control for aircraft and UAVs
 - Autonomous coordination and swarm control of UAM and UAV Fleets
 - Autonomous satellite systems and low Earth orbit (LEO) satellite networks
-- #Sim-to-real transfer and real-world deployment of reinforcement-learning-based flight control policies
+<!-- - #Sim-to-real transfer and real-world deployment of reinforcement-learning-based flight control policies -->
 
 <section class="about-background" aria-labelledby="background-heading">
   <h2 id="background-heading">Academic Background</h2>
