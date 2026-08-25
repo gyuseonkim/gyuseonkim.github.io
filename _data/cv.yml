@@ -44,8 +44,10 @@ cv:
       - bullet: "**Korea University - College of Engineering (ECE)**, Seoul, Republic of Korea - *Research Assistant, Artificial Intelligence and Mobility Laboratory (Advisor: Prof. Joongheon Kim)*"
 
     Industry Background:
-      - bullet: "**RealtimeVisual Co., Ltd. - R&D Center**, Seoul, Republic of Korea - *Aerospace AI Research Engineer (Military Service Exception)*"
-      - bullet: "Developing reinforcement learning-based flight-control algorithms for fighter aircraft and other aerial vehicles, with a focus on sim-to-real transfer of learned policies to physical flight platforms."
+      - bullet: |-
+          **RealtimeVisual Co., Ltd. - R&D Center**, Seoul, Republic of Korea - *Aerospace AI Research Engineer (Military Service Exception)*
+
+          - Developing reinforcement learning-based flight-control algorithms for fighter aircraft and other aerial vehicles, with a focus on sim-to-real transfer of learned policies to physical flight platforms.
 
     Awards and Honors:
       - bullet: "**IEIE Best Paper Award** (November 2025) - *Lightweight Control Modeling via Quantum Reinforcement Learning*"
