@@ -42,23 +42,6 @@
   selected     = {false}
 }
 
-@article{Hallucination_Aware_LLM_UAV,
-  author       = {Ahn, Hyojun and Oh, Seungcheol and Kim, Gyu Seon and Park, Soohyun and Jung, Soyi and Kim, Joongheon},
-  title        = {Hallucination-Aware Hierarchical {LLM} for Autonomous {UAV} Mobility Control: A Safe Reinforcement Learning Approach},
-  journal      = {IEEE Transactions on Networking},
-  year         = {2026},
-  volume       = {34},
-  pages        = {6827--6842},
-  additional_info = {, vol. 34, pp. 6827-6842},
-  doi          = {10.1109/TON.2026.3725648},
-  url          = {https://ieeexplore.ieee.org/document/11661380/},
-  abstract     = {This paper proposes SafeGPT, a hierarchical framework that integrates generative pretrained transformer (GPT)-based large language models (LLM) with safe reinforcement learning (safe-RL). SafeGPT addresses the large-scale random multi-point tour problem (RMPT) for multiple unmanned aerial vehicles (UAVs). The target platforms are large electric vertical take-off and landing (eVTOL) class rotary-wing UAVs. Such platforms suit wide-area logistics and infrastructure inspection rather than small drones. The hierarchical architecture enables scalable UAV coordination by centralizing strategic planning and distributing local route computation, mitigating the complexity issues of conventional methods. To mitigate LLM hallucination risks, i.e., the generation of plausible routes that violate physical constraints, a safe-RL method is implemented as a constrained Markov decision process (MDP) with Lagrangian actor-critic optimization, which promotes constraints on energy consumption, communication efficiency, and duplicate visits. Comprehensive simulations demonstrate SafeGPT’s performance advantages in battery efficiency, communication reliability, and travel distance across problem scales from 500 to 2000 waypoints. Even in demanding scenarios, constraint violation rates remain below specified thresholds. These results establish SafeGPT as an effective solution for large-scale UAV route planning, respecting operational constraints without compromising efficiency.},
-  abbr         = {IEEE TON},
-  category     = {international_journal},
-  bibtex_show  = {true},
-  selected     = {false}
-}
-
 @unpublished{LLM_RL_Anti_Drone,
   author       = {Kim, Gyu Seon and Park, Soohyun and Kim, Joongheon},
   title        = {{LLM}-Guided Reinforcement Learning for Autonomous Control in Anti-Drone Defense Systems},
@@ -106,6 +89,24 @@
   url          = {https://ieeexplore.ieee.org/document/11627874/},
   abstract     = {In modern deep learning research, parameterized quantum circuit (PQC)–based learning algorithms have garnered attention from both industry and academia. Among these, PQC-based reinforcement learning, known as quantum reinforcement learning (QRL), has garnered particular interest due to its potential for accelerating computations. However, due to the limitations of QRL, the output can only be obtained through quantum measurement computation, which poses scalability challenges. Therefore, this paper proposes an exponentially scalable QRL (ES-QRL) to address scalability challenges by deploying basis measurement in environments with extremely large output dimensions, which can be obviously beneficial for large-scale network scheduling. In the literature, conventional QRL algorithms typically rely on classical neural networks. Thus, they suffer from the need for large-scale qubit utilization to achieve high output dimensions, which is a significant burden in the modern noisy intermediate-scale quantum (NISQ) era. This paper leverages our novel measurements, i.e., basis measurement, to overcome the bounds of a limited number of qubits and successfully trains with exponentially large output dimensions with only a few qubits. Our evaluation verifies that the proposed ES-QRL outperforms existing QRL/RL frameworks in large-scale network scheduling problems that require numerous output dimensions.},
   abbr         = {IEEE IoT-J},
+  category     = {international_journal},
+  bibtex_show  = {true},
+  selected     = {false}
+}
+
+@article{Hallucination_Aware_LLM_UAV,
+  author       = {Ahn, Hyojun and Oh, Seungcheol and Kim, Gyu Seon and Park, Soohyun and Jung, Soyi and Kim, Joongheon},
+  title        = {Hallucination-Aware Hierarchical {LLM} for Autonomous {UAV} Mobility Control: A Safe Reinforcement Learning Approach},
+  journal      = {IEEE Transactions on Networking},
+  year         = {2026},
+  month        = {August},
+  volume       = {34},
+  pages        = {6827--6842},
+  additional_info = {, vol. 34, pp. 6827-6842},
+  doi          = {10.1109/TON.2026.3725648},
+  url          = {https://ieeexplore.ieee.org/document/11661380/},
+  abstract     = {This paper proposes SafeGPT, a hierarchical framework that integrates generative pretrained transformer (GPT)-based large language models (LLM) with safe reinforcement learning (safe-RL). SafeGPT addresses the large-scale random multi-point tour problem (RMPT) for multiple unmanned aerial vehicles (UAVs). The target platforms are large electric vertical take-off and landing (eVTOL) class rotary-wing UAVs. Such platforms suit wide-area logistics and infrastructure inspection rather than small drones. The hierarchical architecture enables scalable UAV coordination by centralizing strategic planning and distributing local route computation, mitigating the complexity issues of conventional methods. To mitigate LLM hallucination risks, i.e., the generation of plausible routes that violate physical constraints, a safe-RL method is implemented as a constrained Markov decision process (MDP) with Lagrangian actor-critic optimization, which promotes constraints on energy consumption, communication efficiency, and duplicate visits. Comprehensive simulations demonstrate SafeGPT’s performance advantages in battery efficiency, communication reliability, and travel distance across problem scales from 500 to 2000 waypoints. Even in demanding scenarios, constraint violation rates remain below specified thresholds. These results establish SafeGPT as an effective solution for large-scale UAV route planning, respecting operational constraints without compromising efficiency.},
+  abbr         = {IEEE TON},
   category     = {international_journal},
   bibtex_show  = {true},
   selected     = {false}
