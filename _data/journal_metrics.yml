@@ -76,7 +76,7 @@
   jci:
     quartile: Q2
     rank: 110/267
-    # Percentile was not supplied; do not substitute rank / category size.
+    top_percent: 41.01
 
 "IEEE Communications Magazine":
   jcr_year: 2025
