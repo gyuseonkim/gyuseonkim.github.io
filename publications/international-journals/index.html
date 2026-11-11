@@ -329,7 +329,7 @@
     }
   });
 
-  const journalMetrics = {"IEEE Transactions on Mobile Computing":{"jcr_year":2025,"category":"Computer Science, Information Systems","impact_factor":8.8,"jif":{"quartile":"Q1","rank":"15/267","top_percent":5.4},"jci":{"quartile":"Q1","rank":"8/267","top_percent":2.81}}};
+  const journalMetrics = {"IEEE Transactions on Mobile Computing":{"jcr_year":2025,"category":"Computer Science, Information Systems","impact_factor":8.8,"jif":{"quartile":"Q1","rank":"15/267","top_percent":5.4},"jci":{"quartile":"Q1","rank":"8/267","top_percent":2.81}},"IEEE Internet of Things Journal":{"jcr_year":2025,"category":"Computer Science, Information Systems","impact_factor":8.7,"jif":{"quartile":"Q1","rank":"16/267","top_percent":5.8},"jci":{"quartile":"Q1","rank":"14/267","top_percent":5.06}},"IEEE Transactions on Intelligent Vehicles":{"jcr_year":2025,"category":"Computer Science, Artificial Intelligence","impact_factor":14.3,"jif":{"quartile":"Q1","rank":"6/204","top_percent":2.7},"jci":{"quartile":"Q1","rank":"6/204","top_percent":2.7}},"IEEE Transactions on Vehicular Technology":{"jcr_year":2025,"category":"Engineering, Electrical \u0026 Electronic","impact_factor":7.5,"jif":{"quartile":"Q1","rank":"42/370","top_percent":11.2},"jci":{"quartile":"Q1","rank":"40/372","top_percent":10.62}},"ETRI Journal":{"jcr_year":2025,"category":"Engineering, Electrical \u0026 Electronic","impact_factor":"2.0","jif":{"quartile":"Q3","rank":"243/370","top_percent":65.5},"jci":{"quartile":"Q3","rank":"252/372","top_percent":67.61}},"IEEE Access":{"jcr_year":2025,"category":"Computer Science, Information Systems","impact_factor":4.2,"jif":{"quartile":"Q2","rank":"100/267","top_percent":37.3},"jci":{"quartile":"Q2","rank":"110/267"}},"IEEE Communications Magazine":{"jcr_year":2025,"category":"Engineering, Electrical \u0026 Electronic","impact_factor":8.4,"jif":{"quartile":"Q1","rank":"36/370","top_percent":9.6},"jci":{"quartile":"Q1","rank":"27/372","top_percent":7.12}},"IEEE Transactions on Aerospace and Electronic Systems":{"jcr_year":2025,"category":"Engineering, Aerospace","impact_factor":"7.0","jif":{"quartile":"Q1","rank":"4/59","top_percent":5.9},"jci":{"quartile":"Q1","rank":"7/59","top_percent":11.02}},"IEEE Transactions on Networking":{"jcr_year":2025,"category":"Computer Science, Hardware \u0026 Architecture","impact_factor":5.3,"jci":{"quartile":"Q3","rank":"41/61","top_percent":66.36}},"IEEE Network":{"jcr_year":2025,"category":"Computer Science, Hardware \u0026 Architecture","impact_factor":8.9,"jif":{"quartile":"Q1","rank":"3/60","top_percent":4.2},"jci":{"quartile":"Q1","rank":"5/61","top_percent":7.38}},"IEEE Transactions on Sustainable Computing":{"jcr_year":2025,"category":"Computer Science, Hardware \u0026 Architecture","impact_factor":5.3,"jif":{"quartile":"Q1","rank":"12/60","top_percent":19.2},"jci":{"quartile":"Q2","rank":"16/61","top_percent":25.41}},"IEEE Transactions on Automation Science and Engineering":{"jcr_year":2025,"category":"Automation \u0026 Control Systems","impact_factor":7.9,"jif":{"quartile":"Q1","rank":"11/88","top_percent":11.9},"jci":{"quartile":"Q1","rank":"12/88","top_percent":13.07}}};
 
   document.querySelectorAll(".numbered-publications .periodical > em").forEach((journal) => {
     const metrics = journalMetrics[journal.textContent.trim()];
@@ -349,12 +349,19 @@
 
     ["jif", "jci"].forEach((indicator) => {
       const ranking = metrics[indicator];
+      if (!ranking) return;
+
       const line = document.createElement("div");
       const label = document.createElement("strong");
       label.textContent = `${indicator.toUpperCase()} ranking`;
-      const topPercent = document.createElement("strong");
-      topPercent.textContent = `Top ${ranking.top_percent}%`;
-      line.append(label, document.createTextNode(` · ${ranking.quartile} · ${ranking.rank} · `), topPercent);
+      line.append(label, document.createTextNode(` · ${ranking.quartile} · ${ranking.rank}`));
+
+      if (ranking.top_percent != null) {
+        const topPercent = document.createElement("strong");
+        topPercent.textContent = `Top ${ranking.top_percent}%`;
+        line.append(document.createTextNode(" · "), topPercent);
+      }
+
       block.append(line);
     });
 
