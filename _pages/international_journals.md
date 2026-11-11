@@ -106,7 +106,7 @@ nav: false
     const metrics = journalMetrics[journal.textContent.trim()];
     const periodical = journal.parentElement;
 
-    if (!metrics || /\(Under (?:Review|Revision)\)/i.test(periodical.textContent)) return;
+    if (!metrics) return;
 
     const block = document.createElement("div");
     block.className = "journal-metrics";
@@ -123,7 +123,9 @@ nav: false
       const line = document.createElement("div");
       const label = document.createElement("strong");
       label.textContent = `${indicator.toUpperCase()} ranking`;
-      line.append(label, document.createTextNode(` · ${ranking.quartile} · ${ranking.rank} · Top ${ranking.top_percent}%`));
+      const topPercent = document.createElement("strong");
+      topPercent.textContent = `Top ${ranking.top_percent}%`;
+      line.append(label, document.createTextNode(` · ${ranking.quartile} · ${ranking.rank} · `), topPercent);
       block.append(line);
     });
 
