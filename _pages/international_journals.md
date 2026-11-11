@@ -120,12 +120,19 @@ nav: false
 
     ["jif", "jci"].forEach((indicator) => {
       const ranking = metrics[indicator];
+      if (!ranking) return;
+
       const line = document.createElement("div");
       const label = document.createElement("strong");
       label.textContent = `${indicator.toUpperCase()} ranking`;
-      const topPercent = document.createElement("strong");
-      topPercent.textContent = `Top ${ranking.top_percent}%`;
-      line.append(label, document.createTextNode(` · ${ranking.quartile} · ${ranking.rank} · `), topPercent);
+      line.append(label, document.createTextNode(` · ${ranking.quartile} · ${ranking.rank}`));
+
+      if (ranking.top_percent != null) {
+        const topPercent = document.createElement("strong");
+        topPercent.textContent = `Top ${ranking.top_percent}%`;
+        line.append(document.createTextNode(" · "), topPercent);
+      }
+
       block.append(line);
     });
 
