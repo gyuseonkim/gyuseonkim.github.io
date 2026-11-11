@@ -33,6 +33,13 @@ nav: false
     line-height: 1.4;
   }
 
+  .publications .journal-metrics {
+    margin-top: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
   .numbered-publications {
     counter-reset: publication-number {{ publication_counter_start }};
   }
@@ -91,6 +98,36 @@ nav: false
       journal.textContent = reviewStatus[1];
       periodical.replaceChildren(journal, document.createTextNode(` ${reviewStatus[2]}`));
     }
+  });
+
+  const journalMetrics = {{ site.data.journal_metrics | jsonify }};
+
+  document.querySelectorAll(".numbered-publications .periodical > em").forEach((journal) => {
+    const metrics = journalMetrics[journal.textContent.trim()];
+    const periodical = journal.parentElement;
+
+    if (!metrics || /\(Under (?:Review|Revision)\)/i.test(periodical.textContent)) return;
+
+    const block = document.createElement("div");
+    block.className = "journal-metrics";
+    block.setAttribute("aria-label", "Journal metrics");
+
+    const summary = document.createElement("div");
+    const impactFactor = document.createElement("strong");
+    impactFactor.textContent = `IF: ${metrics.impact_factor}`;
+    summary.append(impactFactor, document.createTextNode(` · JCR ${metrics.jcr_year} · ${metrics.category}`));
+    block.append(summary);
+
+    ["jif", "jci"].forEach((indicator) => {
+      const ranking = metrics[indicator];
+      const line = document.createElement("div");
+      const label = document.createElement("strong");
+      label.textContent = `${indicator.toUpperCase()} ranking`;
+      line.append(label, document.createTextNode(` · ${ranking.quartile} · ${ranking.rank} · Top ${ranking.top_percent}%`));
+      block.append(line);
+    });
+
+    periodical.after(block);
   });
 
   const createCoFirstMark = () => {
