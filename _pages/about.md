@@ -26,9 +26,9 @@ research_keyword_groups:
   - title: Application Areas
     style: applications
     keywords:
-      - Aircraft & UAV Control
-      - Urban Air Mobility
-      - Satellite Autonomy
+      - Aircraft & Fighter Control
+      - Military Drone (UAV)
+      - Urban Air Mobility (UAM)
       - LEO Satellite Networks
 
 announcements:
