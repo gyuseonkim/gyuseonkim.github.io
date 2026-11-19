@@ -15,14 +15,21 @@ profile:
 selected_papers: false
 social: true
 
-research_keywords:
-  - Reinforcement Learning
-  - Multi-Agent RL
-  - Quantum Machine Learning
-  - Physical AI
-  - Flight Control
-  - Aerospace Autonomy
-  - Sim-to-Real
+research_keyword_groups:
+  - title: Methods & Technologies
+    style: methods
+    keywords:
+      - Reinforcement Learning
+      - Multi-Agent RL
+      - Quantum Machine Learning
+      - Sim-to-Real
+  - title: Application Areas
+    style: applications
+    keywords:
+      - Aircraft & UAV Control
+      - Urban Air Mobility
+      - Satellite Autonomy
+      - LEO Satellite Networks
 
 announcements:
   enabled: false
@@ -36,12 +43,53 @@ latest_posts:
 ---
 
 <style>
+  .about-keyword-groups {
+    display: flow-root;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .about-keyword-group + .about-keyword-group {
+    margin-top: 0.9rem;
+  }
+
+  .about-keyword-group > h3 {
+    margin: 0 0 0.5rem;
+    color: var(--global-text-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .about-keyword-group--methods {
+    --keyword-text: #6b35a5;
+    --keyword-bg: #f5effb;
+    --keyword-border: #dfd0ef;
+  }
+
+  .about-keyword-group--applications {
+    --keyword-text: #0f6262;
+    --keyword-bg: #edf8f6;
+    --keyword-border: #c5e7e1;
+  }
+
+  html[data-theme="dark"] .about-keyword-group--methods {
+    --keyword-text: #ddc4ff;
+    --keyword-bg: #31263f;
+    --keyword-border: #5b4470;
+  }
+
+  html[data-theme="dark"] .about-keyword-group--applications {
+    --keyword-text: #a4e4dd;
+    --keyword-bg: #193634;
+    --keyword-border: #315e59;
+  }
+
   .about-keywords {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0;
-    margin: 1rem 0 1.5rem;
+    margin: 0;
     list-style: none;
   }
 
@@ -49,12 +97,12 @@ latest_posts:
     max-width: 100%;
     padding: 0.35rem 0.75rem;
     margin: 0;
-    color: var(--global-text-color);
+    color: var(--keyword-text);
     font-size: 0.8rem;
     font-weight: 500;
     line-height: 1.4;
-    background-color: var(--global-code-bg-color);
-    border: 1px solid var(--global-divider-color);
+    background-color: var(--keyword-bg);
+    border: 1px solid var(--keyword-border);
     border-radius: 999px;
   }
 </style>
@@ -63,11 +111,18 @@ I am a research engineer specializing in **Reinforcement Learning**, **Quantum M
 
 I am currently an **Aerospace AI Research Engineer** at **RealtimeVisual Co., Ltd.** in Seoul, Republic of Korea. My research centers on reinforcement-learning-based control algorithms for fighter aircraft and other aerospace vehicles, with a particular focus on **Sim-to-Real Transfer** to facilitate the reliable deployment of learned control policies on real-world flight platforms.
 
-<ul class="about-keywords" aria-label="Research keywords" role="list">
-  {% for keyword in page.research_keywords %}
-    <li>{{ keyword | escape }}</li>
+<div class="about-keyword-groups" aria-label="Research keywords">
+  {% for group in page.research_keyword_groups %}
+    <section class="about-keyword-group about-keyword-group--{{ group.style }}" aria-labelledby="keywords-{{ group.style }}">
+      <h3 id="keywords-{{ group.style }}">{{ group.title | escape }}</h3>
+      <ul class="about-keywords" role="list">
+        {% for keyword in group.keywords %}
+          <li>{{ keyword | escape }}</li>
+        {% endfor %}
+      </ul>
+    </section>
   {% endfor %}
-</ul>
+</div>
 
 My research interests include:
 
