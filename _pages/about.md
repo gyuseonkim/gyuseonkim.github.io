@@ -21,7 +21,7 @@ research_keyword_groups:
     keywords:
       - Reinforcement Learning
       - Multi-Agent RL
-      - Quantum Machine Learning
+      - Quantum RL
       - Sim-to-Real
       - Physical AI
   - title: Application Areas
