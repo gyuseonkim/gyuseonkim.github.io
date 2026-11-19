@@ -19,7 +19,7 @@ research_keyword_groups:
   - title: Methods & Technologies
     style: methods
     keywords:
-      - Reinforcement Learning (RL)
+      - Reinforcement Learning
       - Multi-Agent RL
       - Quantum Machine Learning
       - Sim-to-Real
@@ -30,7 +30,7 @@ research_keyword_groups:
       - Aircraft & Fighter Control
       - Military Drone (UAV)
       - Urban Air Mobility (UAM)
-      - LEO Satellite Networks
+      - LEO Satellite
 
 announcements:
   enabled: false
