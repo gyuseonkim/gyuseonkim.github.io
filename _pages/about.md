@@ -19,10 +19,11 @@ research_keyword_groups:
   - title: Methods & Technologies
     style: methods
     keywords:
-      - Reinforcement Learning
+      - Reinforcement Learning (RL)
       - Multi-Agent RL
       - Quantum Machine Learning
       - Sim-to-Real
+      - Physical AI
   - title: Application Areas
     style: applications
     keywords:
