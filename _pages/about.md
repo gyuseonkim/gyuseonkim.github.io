@@ -15,6 +15,15 @@ profile:
 selected_papers: false
 social: true
 
+research_keywords:
+  - Reinforcement Learning
+  - Multi-Agent RL
+  - Quantum Machine Learning
+  - Physical AI
+  - Flight Control
+  - Aerospace Autonomy
+  - Sim-to-Real
+
 announcements:
   enabled: false
   scrollable: true
@@ -26,9 +35,39 @@ latest_posts:
   limit: 3
 ---
 
+<style>
+  .about-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 1rem 0 1.5rem;
+    list-style: none;
+  }
+
+  .about-keywords > li {
+    max-width: 100%;
+    padding: 0.35rem 0.75rem;
+    margin: 0;
+    color: var(--global-text-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    background-color: var(--global-code-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+  }
+</style>
+
 I am a research engineer specializing in **Reinforcement Learning**, **Quantum Machine Learning**, and **Autonomous Aerospace Systems**. My research focuses on developing advanced reinforcement learning for **Fighter Aircraft**, **Unmanned Aerial Vehicles (UAVs)**, **Urban Air Mobility (UAM)**, and **Satellite Systems**.
 
 I am currently an **Aerospace AI Research Engineer** at **RealtimeVisual Co., Ltd.** in Seoul, Republic of Korea. My research centers on reinforcement-learning-based control algorithms for fighter aircraft and other aerospace vehicles, with a particular focus on **Sim-to-Real Transfer** to facilitate the reliable deployment of learned control policies on real-world flight platforms.
+
+<ul class="about-keywords" aria-label="Research keywords" role="list">
+  {% for keyword in page.research_keywords %}
+    <li>{{ keyword | escape }}</li>
+  {% endfor %}
+</ul>
 
 My research interests include:
 
