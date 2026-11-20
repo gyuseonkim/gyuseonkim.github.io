@@ -43,6 +43,12 @@ latest_posts:
 ---
 
 <style>
+  .about-background__check {
+    margin-right: 0.4em;
+    color: var(--global-text-color-light);
+    font-size: 0.85em;
+  }
+
   .about-keyword-groups {
     display: flow-root;
     margin: 1rem 0 1.5rem;
@@ -144,7 +150,10 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Research Experience</p>
       <h3><strong>University of Houston</strong>, Houston, TX, USA</h3>
-      <p class="about-background__detail"><strong>Visiting Scholar</strong>, <strong>Department of Electrical and Computer Engineering</strong></p>
+      <p class="about-background__detail">
+        <span class="about-background__check" aria-hidden="true">✓</span><strong>Visiting Scholar</strong>,
+        <strong>Department of Electrical and Computer Engineering</strong>
+      </p>
     </article>
 
     <article class="about-background__card">
@@ -153,8 +162,10 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Doctoral Degree &amp; Postdoctoral Research</p>
       <h3><strong>Korea University</strong>, Seoul, Republic of Korea</h3>
-      <p class="about-background__detail"><strong>Ph.D. in Electrical and Computer Engineering</strong></p>
-      <p class="about-background__detail"><strong>Postdoctoral Fellow</strong></p>
+      <p class="about-background__detail">
+        <span class="about-background__check" aria-hidden="true">✓</span><strong>Ph.D. in Electrical and Computer Engineering</strong>
+      </p>
+      <p class="about-background__detail"><span class="about-background__check" aria-hidden="true">✓</span><strong>Postdoctoral Fellow</strong></p>
     </article>
 
     <article class="about-background__card">
@@ -163,7 +174,7 @@ My research interests include:
       </div>
       <p class="about-background__eyebrow">Bachelor's Degree</p>
       <h3><strong>Inha University</strong>, Incheon, Republic of Korea</h3>
-      <p class="about-background__detail"><strong>B.S. in Aerospace Engineering</strong></p>
+      <p class="about-background__detail"><span class="about-background__check" aria-hidden="true">✓</span><strong>B.S. in Aerospace Engineering</strong></p>
     </article>
 
   </div>
