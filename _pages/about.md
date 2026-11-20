@@ -151,9 +151,10 @@ My research interests include:
       <div class="about-background__logo about-background__logo--cv about-background__logo--korea">
         <img src="{{ '/assets/img/korea-university-emblem.png' | relative_url }}" alt="Korea University emblem">
       </div>
-      <p class="about-background__eyebrow">Doctoral Degree</p>
+      <p class="about-background__eyebrow">Doctoral Degree &amp; Postdoctoral Research</p>
       <h3><strong>Korea University</strong>, Seoul, Republic of Korea</h3>
       <p class="about-background__detail"><strong>Ph.D. in Electrical and Computer Engineering</strong></p>
+      <p class="about-background__detail"><strong>Postdoctoral Fellow</strong></p>
     </article>
 
     <article class="about-background__card">
