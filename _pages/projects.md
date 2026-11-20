@@ -13,7 +13,7 @@ nav_order: 3
     <p class="mb-0">Funded by <em><strong>ADD (Agency for Defense Development)</strong></em></p>
   </li>
   <li class="mb-4">
-    <p class="mb-1"><strong>KE-Anduril AI Pilot Project: Development of AI Algorithms and Simulation Frameworks for Mission Autonomy</strong></p>
+    <p class="mb-1"><strong>KE-AI Pilot Project: Development of AI Algorithms and Simulation Frameworks for Mission Autonomy</strong></p>
     <p class="mb-0">Funded by <em><strong>Korean Air</strong></em></p>
   </li>
   <li class="mb-4">
