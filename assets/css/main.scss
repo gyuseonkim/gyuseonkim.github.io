@@ -165,6 +165,10 @@
     content: "ORCID";
   }
 
+  a[title*="Dblp url"]::before {
+    content: "DBLP";
+  }
+
   a[title*="Email"]::before {
     content: "Email";
   }
