@@ -4,7 +4,7 @@ permalink: /demos/
 title: Demos
 description: Interactive visualizations and recorded demonstrations of research prototypes in reinforcement learning for aerospace systems.
 nav: true
-nav_order: 3.05
+nav_order: 2.5
 ---
 
 <style>
